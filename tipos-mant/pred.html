@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preditiva</title>
+    <link rel="stylesheet" href="manutencao/style.css">
+</head>
+<body>
+    <h2>Preditiva</h2>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Análista responsável</legend>                            
+                <label for="iana">Análista</label>
+                <select name="ana" id="iana">        
+                    <option value="" selected>Escolha</option>
+                    <optgroup label="1° Turno">
+                        <option>Rambo</option>
+                        <option>Huck</option>
+                    </optgroup>
+                    <optgroup label="2° Turno">
+                        <option>Thor</option>
+                        <option>Xuxa</option>
+                    </optgroup>
+                    <optgroup label="3° Turno">
+                        <option>Cris Cyborg</option>
+                        <option>Wanderley Silva</option>
+                    </optgroup>        
+                </select>            
+        </fieldset>
+
+        <h3>Acompanhamento em tempo real:</h3>    
+        <fieldset>
+            <legend>Vibração</legend>
+            <div id="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Motor A</td>
+                            <td rowspan="4"><picture>
+                                <source media="(max-width: 500px)" srcset="imagens/vibracaopq.png">             
+                                <img src="imagens/vibracao.png" alt="Vibração"></picture>                             
+                            <!--<img src="imagens/vibracao.png" alt="Vibração">-->
+                            </td>
+                        </tr>
+                        <tr><td>Motor B</td></tr>
+                        <tr><td>Motor C</td></tr>                        
+                    </thead>
+                </table>            
+            </div>          
+        </fieldset>
+
+        <fieldset>
+            <legend>Ruído</legend>
+            <div id="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Motor A</td>
+                            <td rowspan="4"><picture>
+                                <source media="(max-width: 500px)" srcset="imagens/ruidopq.png">             
+                                <img src="imagens/ruido.png" alt="Ruído"></picture> 
+                            <!--<img src="imagens/ruido.png" alt="Ruído">-->
+                            </td>
+                        </tr>                       
+                        <tr><td>Motor B</td></tr>
+                        <tr><td>Motor C</td></tr>
+                    </thead>
+                </table>            
+            </div>      
+        </fieldset>
+
+        <fieldset>
+            <legend>Temperatura</legend>
+            <div id="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Motor A</td>
+                            <td rowspan="4"><picture>
+                                <source media="(max-width: 500px)" srcset="imagens/temperaturapq.png">             
+                                <img src="imagens/temperatura.png" alt="Temperatura"></picture>
+                            <!--<img src="imagens/temperatura.png" alt="Temperatura">-->
+                            </td>
+                        </tr> 
+                        <tr><td>Motor B</td></tr>
+                        <tr><td>Motor C</td></tr>
+                    </thead>
+                </table>            
+            </div>             
+        </fieldset>
+
+        <fieldset>
+            <legend>Pressão</legend>
+            <div id="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Motor A</td>
+                            <td rowspan="4"><picture>
+                                <source media="(max-width: 500px)" srcset="imagens/pressaopq.png">             
+                                <img src="imagens/pressao.png" alt="Pressão"></picture>
+                            <!--<img src="imagens/pressao.png" alt="Pressão">-->
+                            </td>
+                        </tr>
+                        <tr><td>Motor B</td></tr>
+                        <tr><td>Motor C</td></tr>
+                    </thead>
+                </table>            
+            </div>             
+        </fieldset>
+
+        <fieldset>
+            <legend>Alteração de desempenho</legend>                          
+                <label for="iequ">Equipamento</label>
+                <select name="equipamentopre" id="iequ">        
+                    <option value="" selected>Escolha</option>
+                        <option>Motor A</option>
+                        <option>Motor B</option>
+                        <option>Motor C</option>
+                        <option>Motor D</option>
+                    </select>         
+        </fieldset>
+
+        <fieldset>
+            <legend>Inicio da alteração</legend> 
+            <p>
+                <label for="idata">Data: </label>
+                <input type="date" name="data" id="idata">
+            </p>
+            <p id="dh">
+                <label for="ihora">Hora: </label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tipo de alteração</legend>
+            <input type="checkbox" name="vibracao" id="ivibr"> <label for="ivibr">Vibração</label><br>
+            <input type="checkbox" name="correia" id="icorreia"> <label for="icorreia">Ruído</label> <br>
+            <input type="checkbox" name="filtro" id="ifiltro"> <label for="ifiltro">Temperatura</label> <br>
+            <input type="checkbox" name="rolam" id="irolam"> <label for="irolam">Pressão</label> <br>            
+        </fieldset>
+        
+        <fieldset id="emergencia">
+            <legend>Impacto no processo?</legend>
+            <input type="radio" name="impro" id="iimpro"> <label for="iimpro">Sim</label>
+            <input type="radio" name="impro" id="inimpro"> <label for="inimpro">Não</label>                       
+        </fieldset>
+
+        <fieldset id="emergencia">
+            <legend>Necessária deslocar uma equipe de manutenção?</legend>
+            <input type="radio" name="manu" id="imanusim"> <label for="imanusim">Sim</label>
+            <input type="radio" name="manu" id="imanunao"> <label for="imanunao">Não</label>                       
+        </fieldset>        
+
+        <fieldset id="observacao">
+            <legend>Problema normalizado</legend>
+            <p>
+                <label for="fdata">Data: </label>
+                <input type="date" name="data" id="fdata">
+            </p>
+            <p id="dh">
+                <label for="fhora">Hora: </label>
+                <input type="time" name="hora" id="fhora">
+            </p>  
+        </fieldset>
+        
+        <p>            
+            <label for="iobs"><b>Observações:</b></label><br>
+            <textarea name="msg" id="iobs" cols="40" rows="3"></textarea>
+        </p>
+        
+        <fieldset>
+            <legend>Serviço realizado com sucesso?</legend>
+            <label for="inum">De 1 a 10</label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="5"
+            oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">5</output>
+        </fieldset> 
+
+        <p>
+            <input id="enviar" type="reset" value="Limpar">
+        </p>
+    </form>
+    <!--Adaptação do botão enviar para brincar com os alunos-->
+    <a href="diver/diver1.html" target="_blank"><button><b>Enviar</b></button></a>    
+</body>
+</html>

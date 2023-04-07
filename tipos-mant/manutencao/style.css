@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(255, 255, 247);    
+    --cor0: #8ADFEF;
+    --cor1: #15B6D6;
+    --cor2: #108BA3;
+    margin-top: 0px;
+    padding-top: 0px;    
+}
+
+h2 {
+    /* background-color: rgb(167, 213, 230); */
+    background-image: linear-gradient(to bottom, var(--cor0), var(--cor1), var(--cor2));
+    padding: 25px 0px 20px 15px;  
+    margin: 0px 5px 15px 2px;
+    width: auto;
+}
+
+h3 {
+    margin-left: 5px;
+}
+
+legend {
+    font-weight: bolder;
+    font-size: 1.04em;
+    margin-bottom: 10px;                   
+}
+
+fieldset {
+    margin-bottom: 15px;
+}
+
+option {
+    font-size: 1.04em;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;     
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;               
+}
+
+img {
+    width: auto;
+    padding: 5px; 
+}
+
+#emergencia {
+    background-color: rgba(211, 211, 211, 0.582);
+    color: red;
+    font-weight: bolder;    
+}
+
+p {
+    margin: 0px 0px 15px 2px;
+}
+
+#dh {
+    margin: 0px;
+}
+
+#enviar {
+    font-weight: bolder;
+    font-size: 1.04em;
+    margin: 10px 0px 3px 1px;    
+}
+
+#observacao {
+    margin-bottom: 7px;
+}
+
+img {
+    max-width: 100%;        
+}
+
+button {
+    font-weight: bolder;
+    font-size: 1.04em;
+    margin: 0px 0px 15px 3px;
+}
